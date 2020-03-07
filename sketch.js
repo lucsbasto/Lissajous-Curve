@@ -15,12 +15,17 @@ function draw() {
   for (let i = 0; i < cols; i++) {
     cx = w + i * w + w / 2
     cy = w / 2
+    stroke(1);
     strokeWeight(1)
     ellipse(cx, cy, d, d)
     let x = r * cos(angle - HALF_PI);
     let y = r * sin(angle - HALF_PI);
     strokeWeight(4)
+    stroke(0)
     point(cx+ x, cy+ y)
-    angle += 0.001
-  }
+    stroke(0, 50)
+    strokeWeight(1)
+    line(cx + x, 0, cx + x, height)
+    }
+    angle += 0.01
 }
