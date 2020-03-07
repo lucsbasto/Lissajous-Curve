@@ -18,8 +18,8 @@ function draw() {
     stroke(1);
     strokeWeight(1)
     ellipse(cx, cy, d, d)
-    let x = r * cos(angle - HALF_PI);
-    let y = r * sin(angle - HALF_PI);
+    let x = r * cos(angle * (i + 1) - HALF_PI);
+    let y = r * sin(angle * (i + 1) - HALF_PI);
     strokeWeight(4)
     stroke(0)
     point(cx+ x, cy+ y)
