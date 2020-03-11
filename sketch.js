@@ -1,8 +1,8 @@
 angle = 0
-w = 40
+w = 80
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(800, 800);
   cols = width / w - 1;
   rows = height / w - 1;
 }
