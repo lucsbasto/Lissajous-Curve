@@ -45,13 +45,17 @@ function make2DArray(rows, cols) {
   return x;
 }
 
-windowWidth = window.innerWidth;
-windowHeight = window.innerHeight;
-angle = 0;
-vh = windowHeight - 100
-w = vh / 10;
 
 function setup() {
+  windowWidth = window.innerWidth;
+  windowHeight = window.innerHeight;
+  if (windowHeight > windowWidth) {
+    vh = windowWidth - 100
+  } else {
+    vh = windowHeight - 100
+  }
+  angle = 0;
+  w = vh / 10;
   createCanvas(vh, vh)
   cols = width / w - 1;
   rows = height / w - 1;
