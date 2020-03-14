@@ -2,6 +2,7 @@ class Curve {
   constructor() {
     this.path = []
     this.current = new Point()
+    this.color = this.randomColor()
   }
   addX(x) {
     this.current.x = x
@@ -15,8 +16,16 @@ class Curve {
   reset() {
     this.path = []
   }
+  randomColor() {
+    let r = Math.floor((Math.random() * 255) + 1)
+    let g = Math.floor((Math.random() * 255) + 1)
+    let b = Math.floor((Math.random() * 255) + 1)
+    return color(r, g, b)
+  }
+
   show() {
-    stroke(0)
+    let c = this.color
+    stroke(c)
     strokeWeight(2)
     noFill()
     beginShape()
