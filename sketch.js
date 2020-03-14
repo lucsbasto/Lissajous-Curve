@@ -1,35 +1,10 @@
-
-class  Curve{
-  constructor(){
-      this.path = []
-  }
-
-  addPoint(x, y){
-      this.path.push({x: x, y: y})
-      console.log(this.path)
-  }
-
-  show(){
-      stroke(1)
-      strokeWeight(1)
-      noFill()
-      beginShape()
-      for(let p of this.path){
-          vertex(p.x, p.y)
-          console.log("aaaaaa", p.x, p.y)
-      }
-      endShape()
-  }
-}
-
 windowWidth = window.innerWidth;
 windowHeight = window.innerHeight;
 angle = 0;
 vh = windowHeight - 100
 w = vh/10;
 function setup() {
-  curve = new Curve();
-  createCanvas(vh, vh);
+  createCanvas(vh, vh)
   cols = width / w - 1;
   rows = height / w - 1;
 }
@@ -54,7 +29,6 @@ function draw() {
     stroke(0, 50)
     strokeWeight(1)
     line(cx + x, 0, cx + x, height)
-    curve.addPoint(cx + x, cx +x)
   }
   stroke(1);
   noFill();
@@ -73,6 +47,5 @@ function draw() {
     line(0, cy + y, width, cy + y)
     point(cy + y, cy + y)
   }
-  // curve.show()
   angle += 0.01
 }
