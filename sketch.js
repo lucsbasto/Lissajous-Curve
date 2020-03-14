@@ -12,6 +12,9 @@ class Curve {
   addPoint() {
     this.path.push(this.current)
   }
+  reset() {
+    this.path = []
+  }
   show() {
     stroke(0)
     strokeWeight(2)
@@ -117,5 +120,14 @@ function draw() {
       curves[i][j].show()
     }
   }
-  angle += 0.01
+  angle -= 0.01
+
+  if (angle < -TWO_PI) {
+    for (let i = 0; i < rows; i++) {
+      for (let j = 0; j < cols; j++) {
+        curves[i][j].reset()
+      }
+    }
+    angle = 0
+  }
 }
