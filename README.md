@@ -6,7 +6,7 @@
 
 ## **Preview**
 
-<img src="images/lissajous.gif" width="400" height="400"> |
+<img src="images/lissajous.gif" width="400" height="400">
 
 Available to see in [Lissajous Curve](https://lissajous-curve.netlify.com/)
 
